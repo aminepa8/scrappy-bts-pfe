@@ -18,6 +18,6 @@ from django.urls import path , include
 from MyApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('stages/',views.IdealWeight),
+    path('stages/',views.ScrappyServiceStages),
   
 ]
