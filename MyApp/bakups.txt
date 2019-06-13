@@ -84,10 +84,9 @@ def ScrapyStages(pagenbr ='1'):
 
 @api_view(["GET"])
 def ScrappyServiceStages(request):
-        pagenbr = request.query_params.get('pagenbr')#request.data['pagenbr']
+        pagenbr = request.data['pagenbr']
         if request.method == 'GET':
             data = ScrapyStages(pagenbr)
-            response = Response({"data":data} , 
+            response = HttpResponse(data , 
             content_type='application/json', status=200)
-            ##response = Response(data, status=200, template_name=None, headers=None, content_type='application/json')
             return response
